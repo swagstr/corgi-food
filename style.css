@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  background-color: gray;
+}
+
+.box {
+  min-height: 75px;
+  width: 100%;
+}
+
+.nav {
+  background-color: #278587;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+}
+
+
+.mobile-uppleft-holder {
+  background-color: #278587;
+}
+.logo {
+  background-color: #278587;
+
+}
+
+.mobile-uppright-holder {
+  background-color: #278587;
+}
+
+.banner {
+  background-color: #aad4ff;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.food {
+  background-color: #278587;
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.food a, .footer a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #aad4ff;
+  color: white;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* Menu Page Styles */
+.main {
+    font-family: 'Playfair Display', serif;
+    background-color: #aad4ff;
+}
+
+.main p {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.header h1 {
+    background: #278587;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    height: 140px;
+    margin: 40px auto 0;
+    position: relative;
+    text-align: center;
+    width: 140px;
+    z-index: 10;
+    
+}
+
+.header h1 span {
+    color:#fff;
+    display: block;
+    font-size: 40px;
+    padding: 34px 0 0 0;
+}
+
+.header h1 span+span {
+    color:#000;
+    display: block;
+    font-size: 28px;
+    padding: 0;
+}
+
+.main .food-stuff {
+    background:#fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: -70px auto 80px;
+    padding: 80px;
+    z-index: 0;
+}
+
+.main h1 {
+    color: #444;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main h2 {
+    border-bottom: 1px solid #444;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    margin: 20px 0 10px;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.main h3 {
+    color: #aad4ff;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+}
+
+.price p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    margin: 26px 0 5px;
+    text-align: right;
+}
+
+
+/* Responsive styles */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ececec;
+}
+
+.nav, .mobile-uppleft-holder, .logo, .mobile-uppright-holder, .banner, .menu {
+  order: 10;
+}
+
+
+
+@media screen and (max-width: 30em) {
+  .nav {
+    order: 1;
+    width: 100%;
+
+  }
+  .mobile-uppleft-holder {
+    order: 2;
+    width: 20%;
+  }
+  .logo {
+    order: 3;
+    width: 60%;
+    background-image: url('cg-food.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .mobile-uppright-holder {
+    order: 4;
+    width: 20%;
+  }
+
+  .banner {
+    order: 5;
+    width: 100%;
+    background-image: url('banner.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    min-height: 294px;
+  }
+
+  .menu {
+    order: 5;
+    width: 100%;
+  }
+
+  .food {
+    order: 6;
+  }
+
+  .footer {
+    order: 7;
+  }
+
+  .main h1, .main h2, .main h3, .main p, .price p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 30.01em) {
+  .nav {
+    order: 2;
+    width: 100%;
+    max-height: 130px;
+  }
+  .logo {
+    order: 1;
+    width: 100%;
+    height: 250px;
+    background-image: url('cg-food-big.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    max-width: 820px;
+  }
+  .mobile-uppleft-holder {
+    display: none;
+  }
+  .mobile-uppright-holder {
+    display: none;
+  }
+
+  .banner {
+    order: 3;
+    height: 450px;
+    background-image: url('banner.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    max-width: 820px;
+    margin-top: 3.2em;
+    border-top: 3px solid white;
+    border-bottom: 1.5px solid white;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+  }
+
+  .food {
+    order: 4;
+  }
+
+  .food p, .food a, .footer p, .footer a {
+    font-size: 1.5em;
+  }
+
+  .footer {
+    order: 5;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+}
+
+@media screen and (min-width: 820px) {
+  .container {
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*@media screen and (min-width: 700px) {
+  .green {
+    order: 1;
+    width: 25%;
+  }
+  .dark_blue {
+    order: 2;
+    width: 50%;
+  }
+  .lime {
+    order: 3;
+    width: 25%;
+  }*/
